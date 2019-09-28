@@ -13,6 +13,12 @@ public class LengthTest {
     }
 
     @Test
+    void givenOneFeetAndAnotherOneFeet_WhenCompare_ThenTheyShouldBeEqual() {
+
+        assertTrue(new Length(1, Unit.Feet).equals(new Length(1, Unit.Feet)));
+    }
+
+    @Test
     void givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual() {
 
         assertTrue(new Length(0, Unit.Inch).equals((new Length(0, Unit.Inch))));
@@ -31,22 +37,16 @@ public class LengthTest {
     }
 
     @Test
-    void givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual(){
+    void givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual() {
 
-        assertTrue(new  Length(1,Unit.Feet).equals(new Length(12,Unit.Inch)));
+        assertTrue(new Length(1, Unit.Feet).equals(new Length(12, Unit.Inch)));
     }
 
     @Test
-    void givenTwoFeetAndTwentyFourInch_WhenCompare_ThenTheyShouldBeEqual(){
+    void givenTwoFeetAndTwentyFourInch_WhenCompare_ThenTheyShouldBeEqual() {
 
-        assertTrue(new Length(2,Unit.Feet).equals(new Length(24,Unit.Inch)));
+        assertTrue(new Length(2, Unit.Feet).equals(new Length(24, Unit.Inch)));
     }
 
-
-//    @Test
-//    void givenTwelveInchAndOneFeet_WhenCompare_ThenTheyShouldBeEqual(){
-//
-//        assertTrue(new Length(12,Unit.Inch).equals(new Length(1,Unit.Feet)));
-//    }
 
 }

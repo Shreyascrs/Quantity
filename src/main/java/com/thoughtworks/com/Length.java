@@ -13,32 +13,9 @@ public class Length {
 
     @Override
     public boolean equals(Object object) {
-        if (this == object) {
-            return true;
-        }
 
-        if (!(object instanceof Length)) {
-            return false;
-        }
-
-        if (this.value == 0 && ((Length) object).value == 0) {
-            return true;
-        }
-
-        if (this.unit != ((Length) object).unit) {
-            return this.compare(((Length) object));
-        }
-
-
-        return this.value == ((Length) object).value && this.unit == ((Length) object).unit;
-    }
-
-    public boolean compare(Length object) {
-
-        return this.value * ONE_FEET_TO_INCH == object.value;
-
+        Length other = (Length) object;
+        return this.unit.convertToBase(this.value) == other.unit.convertToBase(other.value);
     }
 
 }
-
-
