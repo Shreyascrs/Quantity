@@ -15,6 +15,6 @@ public class Length {
         if (this == object) {
             return true;
         }
-        return this.value == ((Length) object).value;
+        return this.value == ((Length) object).value && this.unit == ((Length) object).unit;
     }
 }

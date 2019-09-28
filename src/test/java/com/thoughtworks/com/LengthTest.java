@@ -1,6 +1,5 @@
 package com.thoughtworks.com;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,9 +16,12 @@ public class LengthTest {
     void givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual() {
 
         assertTrue(new Length(0, Unit.Inch).equals((new Length(0, Unit.Inch))));
-
     }
 
+    @Test
+    void givenOneFeetAndOneInch_WhenCompare_ThenTheyShouldNotBeEqual() {
 
+        assertFalse(new Length(1, Unit.Feet).equals(new Length(1, Unit.Inch)));
+    }
 
 }
