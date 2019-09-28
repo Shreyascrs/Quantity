@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.com.LengthTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-09-28T07:09:32" hostname="Apekshas-MacBook-Pro.local" time="0.011">
+<testsuite name="com.thoughtworks.com.LengthTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-28T08:35:48" hostname="Apekshas-MacBook-Pro.local" time="0.012">
   <properties/>
   <testcase name="givenZeroFeetAndAnotherZeroFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.008"/>
-  <testcase name="givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
   <testcase name="givenOneFeetAndOneInch_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
-  <testcase name="givenOneFeetAndZeroInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenOneFeetAndZeroInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
+  <testcase name="givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

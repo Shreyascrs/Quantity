@@ -26,8 +26,13 @@ public class LengthTest {
 
     @Test
     void givenOneFeetAndZeroInch_WhenCompare_ThenTheyShouldBeEqual() {
+
         assertTrue(new Length(0, Unit.Feet).equals(new Length(0, Unit.Inch)));
     }
 
+    @Test
+    void givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual(){
 
+        assertTrue(new  Length(1,Unit.Feet).equals(new Length(12,Unit.Inch)));
+    }
 }

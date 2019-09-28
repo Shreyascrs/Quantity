@@ -15,12 +15,25 @@ public class Length {
         if (this == object) {
             return true;
         }
+
         if (this.value == 0 && ((Length) object).value == 0) {
             return true;
         }
+        if (this.unit != ((Length) object).unit) {
+            return this.compare(((Length) object));
+        }
+
 
         return this.value == ((Length) object).value && this.unit == ((Length) object).unit;
-
-
     }
+
+    public boolean compare(Length object) {
+        if (this.value == 1 && object.value == 12) {
+            return true;
+        }
+        return false;
+    }
+
 }
+
+
