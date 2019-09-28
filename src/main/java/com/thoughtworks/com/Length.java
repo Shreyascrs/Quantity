@@ -2,6 +2,7 @@ package com.thoughtworks.com;
 
 public class Length {
 
+    public static final int ONE_FEET_TO_INCH = 12;
     private int value;
     Unit unit;
 
@@ -16,9 +17,14 @@ public class Length {
             return true;
         }
 
+        if (!(object instanceof Length)) {
+            return false;
+        }
+
         if (this.value == 0 && ((Length) object).value == 0) {
             return true;
         }
+
         if (this.unit != ((Length) object).unit) {
             return this.compare(((Length) object));
         }
@@ -28,10 +34,9 @@ public class Length {
     }
 
     public boolean compare(Length object) {
-        if (this.value == 1 && object.value == 12) {
-            return true;
-        }
-        return false;
+
+        return this.value * ONE_FEET_TO_INCH == object.value;
+
     }
 
 }
