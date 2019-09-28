@@ -1,17 +1,17 @@
 package com.thoughtworks.com;
 
-public class Quantity {
+public class Feet    {
 
     private int value;
 
-    public Quantity(int value) {
+    public Feet(int value) {
         this.value = value;
 
     }
 
     @Override
     public boolean equals(Object object) {
-        return true;
 
+        return this.getClass()==((Feet) object).getClass();
     }
 }

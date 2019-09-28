@@ -1,19 +1,16 @@
 package com.thoughtworks.com;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class QuantityTest {
 
     @Test
-    void givenZeroFeet_WhenCompare_ThenTheyShouldBeEqual() {
+    void givenZeroFeetAndAnotherZeroFeet_WhenCompare_ThenTheyShouldBeEqual() {
 
-        Quantity zero = new Quantity(0);
-        Quantity anotherZero = new Quantity(0);
-        Assertions.assertTrue(zero.equals(anotherZero));
+        assertTrue(new Feet(0).equals(new Feet(0)));
     }
 
-
-    @
 }
