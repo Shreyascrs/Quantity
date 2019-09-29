@@ -13,6 +13,21 @@ public class LengthTest {
     }
 
     @Test
+    void givenZeroFeetAndAnotherObject_WhenCompare_ThenTheyShouldNotBeEqual(){
+        assertFalse(new Length(0,Unit.Feet).equals(new String("")));
+    }
+
+    @Test
+    void givenZeroFeetAndNull_WhenCompare_ThenTheyShouldNotBeEqual(){
+        assertFalse(new Length(0,Unit.Feet).equals(null));
+    }
+
+    @Test
+    void givenZeroFeetAndOtherZeroFeet_WhenCompare_ThenTheyShouldBeEqual(){
+        assertTrue(new Length(0,Unit.Feet).equals(new Length(0,Unit.Feet)));
+    }
+
+    @Test
     void givenOneFeetAndAnotherOneFeet_WhenCompare_ThenTheyShouldBeEqual() {
 
         assertTrue(new Length(1, Unit.Feet).equals(new Length(1, Unit.Feet)));
@@ -48,5 +63,14 @@ public class LengthTest {
         assertTrue(new Length(2, Unit.Feet).equals(new Length(24, Unit.Inch)));
     }
 
+    @Test
+    void givenTwoFeetAndTwentyFiveInches_WhenCompare_ThenTheyShouldNotBeEqual() {
+        assertFalse(new Length(2, Unit.Feet).equals(new Length(25, Unit.Inch)));
+    }
+
+     @Test
+    void givenThreeFeetAndOneYard_WhenCompare_ThenTheyShouldBeEqual(){
+        assertTrue(new Length(3,Unit.Feet).equals(new Length(1,Unit.Yard)));
+     }
 
 }

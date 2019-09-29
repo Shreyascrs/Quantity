@@ -1,19 +1,23 @@
 package com.thoughtworks.com;
 
 public enum Unit {
-    Feet {
-        @Override
-        double convertToBase(int value) {
-            return value * 12;
-        }
-    },
 
-    Inch {
-        @Override
-        double convertToBase(int value) {
-            return value * 1;
-        }
-    };
 
-    abstract double convertToBase(int value);
+    Feet(12),
+
+    Inch(1),
+
+    Yard(36);
+
+    public double convertToBase(double value) {
+        return value * conversionalValue ;
+    }
+
+    private int conversionalValue;
+
+    Unit(int conversionalValue) {
+        this.conversionalValue = conversionalValue;
+
+    }
+
 }

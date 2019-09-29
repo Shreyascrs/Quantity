@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.thoughtworks.com.LengthTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-09-28T11:52:40" hostname="Apekshas-MacBook-Pro.local" time="0.014">
+<testsuite name="com.thoughtworks.com.LengthTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2019-09-29T03:47:16" hostname="Apekshas-MacBook-Pro.local" time="0.017">
   <properties/>
-  <testcase name="givenZeroFeetAndAnotherZeroFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.008"/>
-  <testcase name="givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
-  <testcase name="givenOneFeetAndOneInch_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenThreeFeetAndOneYard_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.008"/>
+  <testcase name="givenZeroFeetAndAnotherObject_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenZeroFeetAndAnotherZeroFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
+  <testcase name="givenZeroFeetAndNull_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
+  <testcase name="givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenTwoFeetAndTwentyFiveInches_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenZeroFeetAndOtherZeroFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
+  <testcase name="givenOneFeetAndOneInch_WhenCompare_ThenTheyShouldNotBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
   <testcase name="givenTwoFeetAndTwentyFourInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
   <testcase name="givenOneFeetAndZeroInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
-  <testcase name="givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
-  <testcase name="givenOneFeetAndAnotherOneFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenOneFeetAndTwelveInch_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.001"/>
+  <testcase name="givenOneFeetAndAnotherOneFeet_WhenCompare_ThenTheyShouldBeEqual()" classname="com.thoughtworks.com.LengthTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
