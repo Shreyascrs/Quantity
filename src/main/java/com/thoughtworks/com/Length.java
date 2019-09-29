@@ -27,6 +27,6 @@ public class Length {
     }
 
     public Length add(Length length) {
-        return new Length(length.value,Unit.Inch);
+        return new Length(value+length.value,Unit.Inch);
     }
 }
