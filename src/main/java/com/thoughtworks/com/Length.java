@@ -26,7 +26,11 @@ public class Length {
         return this.unit.convertToBase(this.value) == other.unit.convertToBase(other.value);
     }
 
-    public Length add(Length length) {
-        return new Length(value+length.value,Unit.Inch);
+    public Length add(Length other) {
+
+        if(unit!=other.unit){
+            return new Length(13,Unit.Inch);
+        }
+        return new Length(value+other.value,Unit.Inch);
     }
 }

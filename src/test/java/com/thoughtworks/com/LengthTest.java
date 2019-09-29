@@ -88,8 +88,12 @@ public class LengthTest {
     }
 
     @Test
-    void givenTwoInchAndTwoInch_WhenAdd_ThenReturnsFourInch(){
-
+    void givenTwoInchAndTwoInch_WhenAdd_ThenTheyShouldBeFourInch(){
         assertEquals(new Length(4,Unit.Inch),new Length(2,Unit.Inch).add(new Length(2,Unit.Inch) ));
+    }
+
+    @Test
+    void givenOneInchAndOneFeet_WhenAdd_ThenTheyShouldBeThireteenInch(){
+        assertEquals(new Length(13,Unit.Inch),new Length(1,Unit.Feet).add(new Length(1,Unit.Inch) ));
     }
 }
