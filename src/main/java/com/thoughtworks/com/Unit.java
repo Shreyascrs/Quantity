@@ -9,7 +9,9 @@ public enum Unit {
 
     Yard(36),
 
-    Gallon(1);
+    Gallon(1),
+
+    Liter(0);
 
     public double convertToBase(double value) {
         return value * conversionalValue ;
