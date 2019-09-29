@@ -29,8 +29,13 @@ public class Length {
     public Length add(Length other) {
 
         if(unit!=other.unit){
+            if(unit == Unit.Inch){
+                return new Length(12*other.value+value,Unit.Inch);
+            }
             return new Length(12*value+other.value,Unit.Inch);
         }
+
+
         return new Length(value+other.value,Unit.Inch);
     }
 }
