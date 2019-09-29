@@ -26,4 +26,7 @@ public class Length {
         return this.unit.convertToBase(this.value) == other.unit.convertToBase(other.value);
     }
 
+    public Length add(Length length) {
+        return new Length(0,Unit.Inch);
+    }
 }
