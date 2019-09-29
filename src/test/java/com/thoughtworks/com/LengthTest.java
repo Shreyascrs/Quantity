@@ -82,4 +82,8 @@ public class LengthTest {
         assertEquals(new Length(0,Unit.Inch),new Length(0,Unit.Inch).add(new Length(0,Unit.Inch)));
     }
 
+    @Test
+    void givenZeroInchAndOneInch_WhenAdd_ThenReturnsOneInch(){
+    assertEquals(new Length(1,Unit.Inch),new Length(0,Unit.Inch).add(new Length(1,Unit.Inch)));
+    }
 }
