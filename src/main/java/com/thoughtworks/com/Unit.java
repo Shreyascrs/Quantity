@@ -11,7 +11,7 @@ public enum Unit {
 
     Gallon(3.78),
 
-    Liter(0);
+    Liter(1);
 
     public double convertToBase(double value) {
         return value * conversionalValue ;

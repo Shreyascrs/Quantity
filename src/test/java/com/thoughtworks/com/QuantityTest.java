@@ -112,5 +112,10 @@ public class QuantityTest {
         assertEquals(new Quantity(0,Unit.Gallon),new Quantity(0,Unit.Liter));
     }
 
+    @Test
+    void givenOneGallonAndThreeDotSevenEightLiters_WhenCompare_TheyShouldBeEqual(){
+        assertEquals(new Quantity(1,Unit.Gallon),new Quantity(3.78,Unit.Liter));
+    }
+
 
 }
