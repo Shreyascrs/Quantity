@@ -9,7 +9,7 @@ public enum Unit {
 
     Yard(36),
 
-    Gallon(1),
+    Gallon(3.78),
 
     Liter(0);
 
@@ -17,9 +17,9 @@ public enum Unit {
         return value * conversionalValue ;
     }
 
-    private int conversionalValue;
+    private double conversionalValue;
 
-    Unit(int conversionalValue) {
+    Unit(double conversionalValue) {
         this.conversionalValue = conversionalValue;
     }
 
