@@ -84,27 +84,27 @@ public class QuantityTest {
     }
 
 
-//    @Test
-//    void givenTwoInchAndTwoInch_WhenAdd_ThenTheyShouldBeFourInch() {
-//        Quantity twoInch = Quantity.createInch(2);
-//        Quantity anothertwoInch = Quantity.createInch(2);
-//        assertEquals(Quantity.createInch(4), twoInch.add(anothertwoInch));
-//    }
-//
-//    @Test
-//    void givenOneInchAndOneFeet_WhenAdd_ThenTheyShouldBeThireteenInch() {
-//        Quantity oneFeet = Quantity.createFeet(1);
-//        Quantity oneInch = Quantity.createInch(1);
-//        assertEquals(Quantity.createInch(13), oneFeet.add(oneInch));
-//    }
-//
-//
-//    @Test
-//    void givenZeroGallonAndZeroLiters_WhenCompare_TheyShouldBeEqual() {
-//        Quantity zeroGallon = Quantity.createGallon(0);
-//        Quantity anotherZeroGallon = Quantity.createGallon(0);
-//        assertEquals(Quantity.createGallon(0), zeroGallon.add(anotherZeroGallon));
-//    }
+    @Test
+    void givenTwoInchAndTwoInch_WhenAdd_ThenTheyShouldBeFourInch() {
+        Quantity twoInch = Quantity.createInch(2);
+        Quantity anothertwoInch = Quantity.createInch(2);
+        assertEquals(Quantity.createInch(4), twoInch.add(anothertwoInch));
+    }
+
+    @Test
+    void givenOneInchAndOneFeet_WhenAdd_ThenTheyShouldBeThireteenInch() {
+        Quantity oneFeet = Quantity.createFeet(1);
+        Quantity oneInch = Quantity.createInch(1);
+        assertEquals(Quantity.createInch(13), oneFeet.add(oneInch));
+    }
+
+
+    @Test
+    void givenZeroGallonAndZeroLiters_WhenCompare_TheyShouldBeEqual() {
+        Quantity zeroGallon = Quantity.createGallon(0);
+        Quantity anotherZeroGallon = Quantity.createGallon(0);
+        assertEquals(Quantity.createGallon(0), zeroGallon.add(anotherZeroGallon));
+    }
 
     @Test
     void givenOneGallonAndThreeDotSevenEightLiters_WhenCompare_TheyShouldBeEqual() {
@@ -121,9 +121,9 @@ public class QuantityTest {
     }
 
     @Test
-    void givenOneGallonAndOneFeet_WhenEqual_ThenMustThrowException(){
-        Quantity oneGallon=Quantity.createGallon(1);
-        Quantity oneFeet=Quantity.createFeet(1);
+    void givenOneGallonAndOneFeet_WhenEqual_ThenMustThrowException() {
+        Quantity oneGallon = Quantity.createGallon(1);
+        Quantity oneFeet = Quantity.createFeet(1);
         assertFalse(oneFeet.equals(oneGallon));
     }
 }
