@@ -140,6 +140,4 @@ public class QuantityTest {
         Quantity oneFeet = createFeet(1);
         assertThrows(IllegalArgumentException.class,()->oneFeet.add(oneLiter));
     }
-
-
 }

@@ -4,16 +4,37 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UnitTest {
+class UnitTest {
+
     @Test
-    void givenZeroGallonAndAnotherZeroGallon_WhenCompare_ThenTheyShouldBeEqual(){
-//        assertEquals(new Quantity(0,Unit.Gallon),new Quantity(0,Unit.Gallon));
-        assertEquals(Quantity.createGallon(0),Quantity.createGallon(0));
+    void givenZeroFeet_WhenConvertToBase_ThenConvertToInch() {
+
+        Quantity expected = new Quantity(0, Unit.Inch);
+        Quantity actual = Unit.Feet.convertToBase(new Quantity(0, Unit.Feet));
+
+        assertEquals(expected.getUnit(), actual.getUnit());
     }
 
     @Test
-    void givenZeroLiterAndZeroLiter_WhenCompare_ThenTheyShouldBeEqual(){
-    assertEquals(Quantity.createLiter(0),Quantity.createLiter(0));
+    void givenOneFeet_WhenConvertToBase_ThenConvertToInch() {
+
+        Quantity expected = new Quantity(12, Unit.Inch);
+        Quantity actual = Unit.Feet.convertToBase(new Quantity(1, Unit.Feet));
+
+        assertEquals(expected.getUnit(), actual.getUnit());
+        assertEquals(expected.value
+                ,actual.value);
+    }
+
+    @Test
+    void givenOneYard_WhenConvertToBase_ThenConvertToInch() {
+
+        Quantity expected = new Quantity(36, Unit.Inch);
+        Quantity actual = Unit.Yard.convertToBase(new Quantity(1, Unit.Yard));
+
+
+        assertEquals(expected.getUnit(), actual.getUnit());
+        assertEquals(expected.value,actual.value);
     }
 
 }
