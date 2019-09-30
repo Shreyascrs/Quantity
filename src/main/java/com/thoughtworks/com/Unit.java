@@ -14,7 +14,7 @@ public enum Unit {
     Liter(1);
 
     public double convertToBase(double value) {
-        return value * conversionalValue ;
+        return value * conversionalValue;
     }
 
     private double conversionalValue;
