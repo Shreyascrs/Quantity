@@ -13,11 +13,6 @@ public enum Unit {
 
     Gallon(3.78, Unit.Liter);
 
-
-    public Quantity convertToBase(Quantity quantity) {
-        return new Quantity(quantity.value * conversionalValue, baseUnit);
-    }
-
     private double conversionalValue;
     private Unit baseUnit;
 
@@ -30,6 +25,10 @@ public enum Unit {
     Unit(double conversionalValue, Unit baseunit) {
         this.conversionalValue = conversionalValue;
         this.baseUnit = baseunit;
+    }
+
+    public Quantity convertToBase(Quantity quantity) {
+        return new Quantity(quantity.value * conversionalValue, baseUnit);
     }
 
 }

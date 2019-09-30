@@ -60,6 +60,11 @@ public class Quantity {
     }
 
     public Quantity add(Quantity other) {
-        return new Quantity(unit.convertToBase(this).value + other.unit.convertToBase(other).value, other.unit);
+        Quantity quantity1=this.unit.convertToBase(this);
+        Quantity quantity2=other.unit.convertToBase(other);
+        if(quantity1.unit==quantity2.unit){
+            return new Quantity(quantity1.value+quantity2.value,other.unit);
+        }
+        throw new IllegalArgumentException("Two Different Quantity can't be added");
     }
 }
