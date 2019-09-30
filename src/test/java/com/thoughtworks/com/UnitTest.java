@@ -22,8 +22,7 @@ class UnitTest {
         Quantity actual = Unit.Feet.convertToBase(new Quantity(1, Unit.Feet));
 
         assertEquals(expected.getUnit(), actual.getUnit());
-        assertEquals(expected.value
-                ,actual.value);
+        assertEquals(expected.value, actual.value);
     }
 
     @Test
@@ -34,7 +33,7 @@ class UnitTest {
 
 
         assertEquals(expected.getUnit(), actual.getUnit());
-        assertEquals(expected.value,actual.value);
+        assertEquals(expected.value, actual.value);
     }
 
     @Test
@@ -45,7 +44,7 @@ class UnitTest {
 
 
         assertEquals(expected.getUnit(), actual.getUnit());
-        assertEquals(expected.value,actual.value);
+        assertEquals(expected.value, actual.value);
     }
 
 }
