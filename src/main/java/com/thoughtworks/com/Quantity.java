@@ -1,10 +1,13 @@
 package com.thoughtworks.com;
 
+import lombok.Getter;
+
+@Getter
 public class Quantity {
 
     public static final int ONE_FEET_TO_INCH = 12;
-    private double value;
-    Unit unit;
+    protected double value;
+    private Unit unit;
 
     public static Quantity createFeet(double value) {
         return new Quantity(value, Unit.Feet);
@@ -27,7 +30,7 @@ public class Quantity {
     }
 
 
-    private Quantity(double value, Unit unit) {
+    protected Quantity(double value, Unit unit) {
         this.value = value;
         this.unit = unit;
     }
@@ -43,10 +46,20 @@ public class Quantity {
         }
 
         Quantity other = (Quantity) object;
-        return this.unit.convertToBase(this.value) == other.unit.convertToBase(other.value);
+
+        return this.unit.convertToBase(this).value == other.unit.convertToBase(other).value &&
+                this.unit.convertToBase(this).unit == other.unit.convertToBase(other).unit;
+    }
+
+    @Override
+    public String toString() {
+        return "Quantity{" +
+                "value=" + value +
+                ", unit=" + unit +
+                '}';
     }
 
     public Quantity add(Quantity other) {
-        return new Quantity(unit.convertToBase(value) + other.unit.convertToBase(other.value), Unit.Inch);
+        return new Quantity(unit.convertToBase(this).value + other.unit.convertToBase(other).value, other.unit);
     }
 }
