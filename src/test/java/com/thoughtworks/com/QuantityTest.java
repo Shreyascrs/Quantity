@@ -2,7 +2,7 @@ package com.thoughtworks.com;
 
 import org.junit.jupiter.api.Test;
 
-import static com.thoughtworks.com.Quantity.*;
+import static com.thoughtworks.com.QuantityFactory.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class QuantityTest {
