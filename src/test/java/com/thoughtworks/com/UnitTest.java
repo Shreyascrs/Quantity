@@ -37,4 +37,15 @@ class UnitTest {
         assertEquals(expected.value,actual.value);
     }
 
+    @Test
+    void givenOneGallon_WhenConvertToBase_ThenConvertToLiter() {
+
+        Quantity expected = new Quantity(3.78, Unit.Liter);
+        Quantity actual = Unit.Gallon.convertToBase(new Quantity(1, Unit.Gallon));
+
+
+        assertEquals(expected.getUnit(), actual.getUnit());
+        assertEquals(expected.value,actual.value);
+    }
+
 }
