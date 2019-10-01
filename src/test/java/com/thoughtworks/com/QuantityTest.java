@@ -163,17 +163,23 @@ public class QuantityTest {
     }
 
     @Test
-    void givenOneKgAndAnotherOneKg_WhenEquals_ThenMustBeEqual(){
+    void givenOneKgAndAnotherOneKg_WhenEquals_ThenMustBeEqual() {
         assertTrue(QuantityFactory.createKg(1).equals(QuantityFactory.createKg(1)));
     }
 
     @Test
-    void givenThousandGramAndAnotherThousandGram_WhenEquals_ThenMustBeEqual(){
+    void givenThousandGramAndAnotherThousandGram_WhenEquals_ThenMustBeEqual() {
         assertTrue(QuantityFactory.createGram(1000).equals(QuantityFactory.createGram(1000)));
     }
 
     @Test
-    void givenThousandGramAndOneKg_WhenEquals_ThenMustBeEqual(){
+    void givenThousandGramAndOneKg_WhenEquals_ThenMustBeEqual() {
         assertTrue(QuantityFactory.createGram(1000).equals(QuantityFactory.createKg(1)));
     }
+
+    @Test
+    void givenThousandGramAndAnotherOneThousandGram_WhenAdded_ThenMustBeAdded() {
+        assertEquals(QuantityFactory.createGram(2000),QuantityFactory.createGram(1000).add(QuantityFactory.createGram(1000)));
+    }
+
 }
