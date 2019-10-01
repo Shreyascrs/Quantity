@@ -1,6 +1,12 @@
 package com.thoughtworks.com;
 
-import com.thoughtworks.com.Units.*;
+import com.thoughtworks.com.units.length.Feet;
+import com.thoughtworks.com.units.length.Inch;
+import com.thoughtworks.com.units.length.Yard;
+import com.thoughtworks.com.units.volume.Gallon;
+import com.thoughtworks.com.units.volume.Liter;
+import com.thoughtworks.com.units.weight.Gram;
+import com.thoughtworks.com.units.weight.Kg;
 
 public class QuantityFactory {
 
@@ -22,5 +28,13 @@ public class QuantityFactory {
 
     public static Quantity createLiter(double value) {
         return new Quantity(value, new Liter());
+    }
+
+    public static Quantity createKg(double value) {
+        return new Quantity(value, new Kg());
+    }
+
+    public static Quantity createGram(double value) {
+        return new Quantity(value, new Gram());
     }
 }

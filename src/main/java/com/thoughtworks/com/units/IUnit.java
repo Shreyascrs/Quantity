@@ -1,4 +1,4 @@
-package com.thoughtworks.com.Units;
+package com.thoughtworks.com.units;
 
 import com.thoughtworks.com.Quantity;
 

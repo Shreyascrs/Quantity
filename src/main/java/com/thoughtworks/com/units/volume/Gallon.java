@@ -1,4 +1,4 @@
-package com.thoughtworks.com.Units;
+package com.thoughtworks.com.units.volume;
 
 import com.thoughtworks.com.Quantity;
 import com.thoughtworks.com.QuantityFactory;
@@ -8,7 +8,6 @@ public class Gallon implements IVolume {
 
     @Override
     public Quantity convertToBase(double value) {
-
         return QuantityFactory.createLiter(value * conversionFactor);
     }
 

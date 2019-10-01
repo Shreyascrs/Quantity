@@ -1,6 +1,6 @@
 package com.thoughtworks.com;
 
-import com.thoughtworks.com.Units.IUnit;
+import com.thoughtworks.com.units.IUnit;
 import lombok.Getter;
 
 @Getter
@@ -43,6 +43,7 @@ public class Quantity {
     public Quantity add(Quantity other) {
         Quantity firstQuantity = this.unit.convertToBase(this.value);
         Quantity secondQuantity = other.unit.convertToBase(other.value);
+
         if (firstQuantity.unit.equals(secondQuantity.unit)) {
             return new Quantity(firstQuantity.value + secondQuantity.value, other.unit);
         }

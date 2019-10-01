@@ -161,4 +161,9 @@ public class QuantityTest {
         Throwable excption = assertThrows(IllegalArgumentException.class, () -> oneFeet.add(oneLiter));
         assertEquals("Two Different Quantity can't be added", excption.getMessage());
     }
+
+    @Test
+    void givenOneKgAndAnotherOneKg_WhenEquals_ThenMustBeEqual(){
+        assertTrue(QuantityFactory.createKg(1).equals(QuantityFactory.createKg(1)));
+    }
 }

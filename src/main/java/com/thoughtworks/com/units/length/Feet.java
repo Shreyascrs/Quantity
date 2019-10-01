@@ -1,9 +1,9 @@
-package com.thoughtworks.com.Units;
+package com.thoughtworks.com.units.length;
 
 import com.thoughtworks.com.Quantity;
 import com.thoughtworks.com.QuantityFactory;
 
-public class Feet implements ILengths {
+public class Feet implements ILength {
 
     private final double conversionFactor=12;
     @Override

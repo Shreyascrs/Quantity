@@ -1,9 +1,9 @@
-package com.thoughtworks.com.Units;
+package com.thoughtworks.com.units.length;
 
 import com.thoughtworks.com.Quantity;
 import com.thoughtworks.com.QuantityFactory;
 
-public class Yard implements ILengths {
+public class Yard implements ILength {
     private double conversionFactor = 36;
 
     @Override
