@@ -13,4 +13,10 @@ public class TestNonAddableQuantity {
         assertEquals(QuantityFactory.createCelcius(0), QuantityFactory.createCelcius(0));
 
     }
+
+    @Test
+    void  givenOneCelciusAndAnotherOneCelcius_WhenEquals_ThenMustbeEqual(){
+
+        assertEquals(QuantityFactory.createCelcius(1.0),QuantityFactory.createCelcius(1.0));
+    }
 }
