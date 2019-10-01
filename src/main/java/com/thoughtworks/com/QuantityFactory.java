@@ -3,6 +3,8 @@ package com.thoughtworks.com;
 import com.thoughtworks.com.units.length.Feet;
 import com.thoughtworks.com.units.length.Inch;
 import com.thoughtworks.com.units.length.Yard;
+import com.thoughtworks.com.units.temperature.Celcius;
+import com.thoughtworks.com.units.temperature.Farenheit;
 import com.thoughtworks.com.units.volume.Gallon;
 import com.thoughtworks.com.units.volume.Liter;
 import com.thoughtworks.com.units.weight.Gram;
@@ -36,5 +38,13 @@ public class QuantityFactory {
 
     public static Quantity createGram(double value) {
         return new Quantity(value, new Gram());
+    }
+
+    public static NonAddableQuantity createCelcius(double value) {
+        return new NonAddableQuantity(value, new Celcius());
+    }
+
+    public static NonAddableQuantity createFarenheit(double value) {
+        return new NonAddableQuantity(value, new Farenheit());
     }
 }

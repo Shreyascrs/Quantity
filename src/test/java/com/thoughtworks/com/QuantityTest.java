@@ -40,7 +40,7 @@ public class QuantityTest {
 
     @Test
     void givenZeroInchAndZeroInch_WhenCompare_TheyTheyShouldBeEqual() {
-        Quantity quantityInch = createInch(0);
+        Quantity quantityInch = QuantityFactory.createInch(0);
         Quantity anotherQuantityInch = createInch(0);
 
         assertTrue(quantityInch.equals(anotherQuantityInch));
@@ -158,8 +158,8 @@ public class QuantityTest {
         Quantity oneLiter = createLiter(1);
         Quantity oneFeet = createFeet(1);
 
-        Throwable excption = assertThrows(IllegalArgumentException.class, () -> oneFeet.add(oneLiter));
-        assertEquals("Two Different Quantity can't be added", excption.getMessage());
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> oneFeet.add(oneLiter));
+        assertEquals("Two Different Quantity can't be added", exception.getMessage());
     }
 
     @Test
@@ -178,8 +178,13 @@ public class QuantityTest {
     }
 
     @Test
-    void givenThousandGramAndAnotherOneThousandGram_WhenAdded_ThenMustBeAdded() {
-        assertEquals(QuantityFactory.createGram(2000),QuantityFactory.createGram(1000).add(QuantityFactory.createGram(1000)));
+    void givenThousandGramAndAnotherOneThousandGram_WhenAdded_ThenMustBeTwoThousandGrams() {
+        assertEquals(QuantityFactory.createGram(2000), QuantityFactory.createGram(1000).add(QuantityFactory.createGram(1000)));
+    }
+
+    @Test
+    void givenOneKgAndAnotherOneKg_WhenAdded_ThenMustBeTwoThousandGrams() {
+        assertEquals(QuantityFactory.createGram(2000.0), QuantityFactory.createKg(1.0).add(QuantityFactory.createKg(1.0)));
     }
 
 }

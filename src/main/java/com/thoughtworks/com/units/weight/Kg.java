@@ -7,7 +7,7 @@ public class Kg implements IWeight {
 
     @Override
     public Quantity convertToBase(double value) {
-        return QuantityFactory.createGram(value * 1000);
+        return QuantityFactory.createGram(value * 1000.0);
     }
 
     @Override

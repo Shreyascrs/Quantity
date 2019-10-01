@@ -1,6 +1,6 @@
 package com.thoughtworks.com.units.length;
 
-import com.thoughtworks.com.units.IUnit;
+import com.thoughtworks.com.units.IAddableQuantity;
 
-public interface ILength extends IUnit {
+public interface ILength extends IAddableQuantity {
 }

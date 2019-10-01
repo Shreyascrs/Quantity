@@ -1,15 +1,15 @@
 package com.thoughtworks.com;
 
-import com.thoughtworks.com.units.IUnit;
+import com.thoughtworks.com.units.IAddableQuantity;
 import lombok.Getter;
 
 @Getter
 public class Quantity {
 
     protected double value;
-    private IUnit unit;
+    private IAddableQuantity unit;
 
-    protected Quantity(double value, IUnit unit) {
+    protected Quantity(double value, IAddableQuantity unit) {
         this.value = value;
         this.unit = unit;
     }
@@ -28,7 +28,7 @@ public class Quantity {
         Quantity firstQuantity = this.unit.convertToBase(this.value);
         Quantity secondQuantity = other.unit.convertToBase(other.value);
 
-        return firstQuantity.value == secondQuantity.value && firstQuantity.unit.equals(secondQuantity.unit);
+            return firstQuantity.value == secondQuantity.value && firstQuantity.unit.equals(secondQuantity.unit);
 
     }
 
@@ -43,9 +43,8 @@ public class Quantity {
     public Quantity add(Quantity other) {
         Quantity firstQuantity = this.unit.convertToBase(this.value);
         Quantity secondQuantity = other.unit.convertToBase(other.value);
-
         if (firstQuantity.unit.equals(secondQuantity.unit)) {
-            return new Quantity(firstQuantity.value + secondQuantity.value, other.unit);
+            return new Quantity(firstQuantity.value + secondQuantity.value, firstQuantity.unit);
         }
         throw new IllegalArgumentException("Two Different Quantity can't be added");
     }
