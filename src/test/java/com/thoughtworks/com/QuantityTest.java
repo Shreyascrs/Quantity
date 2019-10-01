@@ -166,4 +166,9 @@ public class QuantityTest {
     void givenOneKgAndAnotherOneKg_WhenEquals_ThenMustBeEqual(){
         assertTrue(QuantityFactory.createKg(1).equals(QuantityFactory.createKg(1)));
     }
+
+    @Test
+    void givenThousandGramAndAnotherThousandGram_WhenEquals_ThenMustBeEqual(){
+        assertTrue(QuantityFactory.createGram(1000).equals(QuantityFactory.createGram(1000)));
+    }
 }
