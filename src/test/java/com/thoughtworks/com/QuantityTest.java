@@ -130,7 +130,7 @@ public class QuantityTest {
     }
 
     @Test
-    void givenOneFeetAndONeLiter_WhenEqual_TheyShouldTrue() {
+    void givenOneFeetAndTwelveInch_WhenEqual_TheyShouldTrue() {
         Quantity quantityFeet = createFeet(1);
         Quantity quantityInch = createInch(12);
 

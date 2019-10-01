@@ -1,24 +1,26 @@
 package com.thoughtworks.com;
 
+import com.thoughtworks.com.Units.*;
+
 public class QuantityFactory {
 
     public static Quantity createFeet(double value) {
-        return new Quantity(value, Unit.Feet);
+        return new Quantity(value, new Feet());
     }
 
     public static Quantity createInch(double value) {
-        return new Quantity(value, Unit.Inch);
+        return new Quantity(value, new Inch());
     }
 
     public static Quantity createYard(double value) {
-        return new Quantity(value, Unit.Yard);
+        return new Quantity(value, new Yard());
     }
 
     public static Quantity createGallon(double value) {
-        return new Quantity(value, Unit.Gallon);
+        return new Quantity(value, new Gallon());
     }
 
     public static Quantity createLiter(double value) {
-        return new Quantity(value, Unit.Liter);
+        return new Quantity(value, new Liter());
     }
 }

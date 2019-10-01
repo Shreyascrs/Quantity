@@ -1,15 +1,15 @@
 package com.thoughtworks.com;
 
+import com.thoughtworks.com.Units.IUnit;
 import lombok.Getter;
 
 @Getter
 public class Quantity {
 
-    public static final int ONE_FEET_TO_INCH = 12;
     protected double value;
-    private Unit unit;
+    private IUnit unit;
 
-    protected Quantity(double value, Unit unit) {
+    protected Quantity(double value, IUnit unit) {
         this.value = value;
         this.unit = unit;
     }
@@ -25,9 +25,11 @@ public class Quantity {
         }
 
         Quantity other = (Quantity) object;
+        Quantity firstQuantity = this.unit.convertToBase(this.value);
+        Quantity secondQuantity = other.unit.convertToBase(other.value);
 
-        return this.unit.convertToBase(this).value == other.unit.convertToBase(other).value &&
-                this.unit.convertToBase(this).unit == other.unit.convertToBase(other).unit;
+        return firstQuantity.value == secondQuantity.value && firstQuantity.unit.equals(secondQuantity.unit);
+
     }
 
     @Override
@@ -39,10 +41,10 @@ public class Quantity {
     }
 
     public Quantity add(Quantity other) {
-        Quantity quantity1 = this.unit.convertToBase(this);
-        Quantity quantity2 = other.unit.convertToBase(other);
-        if (quantity1.unit == quantity2.unit) {
-            return new Quantity(quantity1.value + quantity2.value, other.unit);
+        Quantity firstQuantity = this.unit.convertToBase(this.value);
+        Quantity secondQuantity = other.unit.convertToBase(other.value);
+        if (firstQuantity.unit.equals(secondQuantity.unit)) {
+            return new Quantity(firstQuantity.value + secondQuantity.value, other.unit);
         }
         throw new IllegalArgumentException("Two Different Quantity can't be added");
     }
