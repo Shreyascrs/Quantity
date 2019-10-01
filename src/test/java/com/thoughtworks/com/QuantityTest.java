@@ -171,4 +171,9 @@ public class QuantityTest {
     void givenThousandGramAndAnotherThousandGram_WhenEquals_ThenMustBeEqual(){
         assertTrue(QuantityFactory.createGram(1000).equals(QuantityFactory.createGram(1000)));
     }
+
+    @Test
+    void givenThousandGramAndOneKg_WhenEquals_ThenMustBeEqual(){
+        assertTrue(QuantityFactory.createGram(1000).equals(QuantityFactory.createKg(1)));
+    }
 }
